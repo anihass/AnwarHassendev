@@ -4,36 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Anwar</title>
-    <link rel="stylesheet" href="stylesheet/about-day.css">
+    <link rel="stylesheet" href="stylesheet/about-night.css" id="theme-style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body class="dark">
 
     <section class="about">
         <div class="container">
-            <nav class="navbar">
-
-            <div class="logo">
-                Anwar<span>Hassen</span>
-            </div>
-
-           <div class="nav-links">
-                <button class="btn home-btn">Home</button>
-                <button class="btn about-btn active">About</button>
-                <button class="btn skills-btn">Skills</button>
-                <button class="btn project-btn">Projects</button>
-                <button class="btn contact-btn">Contact</button>
-                <button class="btn login-btn">Login</button>
-                <button class="btn signin-btn">Sign in</button>
-                <button class="btn admin-btn">Admin</button>                
-            </div>                                                      
-            
-            <button id="theme-toggle">
-                <i class="fas fa-sun"></i>
-            </button>
-            <div class="menu-toggle">☰</div>
-
-        </nav>
+            <nav class="navbar">                                                    
+            </nav>
 
             <!-- Header -->
             <div class="about-header">
@@ -99,23 +78,17 @@
                         <i class="fa-brands fa-github"></i>
                         <h3>GitHub</h3>
                     </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-key"></i>  
+                        <h3>REST APIs</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-lock"></i>
+                        <h3>Authentication & Authorization</h3>
+                    </div>
 
                 </div>
             </div>
-
-            <!-- Learning -->
-            <div class="section">
-                <h2>Currently Learning</h2>
-
-                <div class="learning-list">
-                    <div>✓ Advanced JavaScript</div>
-                    <div>✓ REST APIs</div>
-                    <div>✓ MongoDB</div>
-                    <div>✓ Authentication & Authorization</div>
-                    <div>✓ React.js</div>
-                </div>
-            </div>
-
             <!-- Projects -->
             <div class="section">
                 <h2>Featured Projects</h2>
@@ -160,6 +133,7 @@
 
         </div>
     </section>
+    <script src="./script/about.js" type="module"></script>
 
 </body>
 </html>

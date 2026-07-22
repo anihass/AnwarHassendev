@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Page</title>
+  <link rel="stylesheet" href="stylesheet/admin-night.css" id="theme-style">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="dark">
+  <nav class="navbar"></nav>
+  <main class="admin-container">
+    <!-- Admin icon and title -->
+    <div class="admin-header">
+      <i class="fa-solid fa-user-tie admin-icon"></i>
+      <h1>Admin</h1>
+    </div>
+
+    <!-- Functional links in grid -->
+    <div class="admin-grid">
+      <a href="upload.html" class="admin-card">
+        <i class="fa-solid fa-upload"></i>
+        <span>Project Upload</span>
+      </a>
+      <a href="delete.html" class="admin-card">
+        <i class="fa-solid fa-trash"></i>
+        <span>Project Removal</span>
+      </a>
+      <a href="project.html" class="admin-card">
+        <i class="fa-solid fa-eye"></i>
+        <span>Project Overview</span>
+      </a>
+      <a href="autherization.html" class="admin-card">
+        <i class="fa-solid fa-users"></i>
+        <span>User Management</span>
+      </a>
+    </div>
+  </main>
+  <script src="script/admin.js" type="module"></script>
+</body>
+</html>

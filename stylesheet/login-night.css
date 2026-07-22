@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+}
+body.dark {                
+    display: flex;                  
+    flex-direction: column;         
+    justify-content: center;        
+    align-items: center;            
+    background: #0f172a;   /* Deep navy background */
+    color: #e2e8f0;        /* Light gray text */
+    transition: background 0.4s ease, color 0.4s ease;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.dark .navbar {
+    background: rgba(15, 23, 42, 0.85);
+    width: 90%;
+    margin: auto;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dark .logo {
+    color: #f8fafc;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.dark .logo span {
+    color: #3b82f6;
+}
+
+/* Navigation buttons */
+.dark .btn {
+    background: #1e293b;
+    color: #f8fafc;
+    border: 1px solid #3b82f6;
+    text-decoration: none;
+    display: inline-block;     
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;     
+    padding: 15px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dark .btn:hover {
+    background: #3b82f6;
+    color: #fff;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+.dark .active {
+    background-color: #2563eb;
+}
+.dark .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;    
+}
+/* Theme toggle */
+.dark #theme-toggle {
+    background: #1e293b;
+    color: #f8fafc;
+    border: 1px solid #3b82f6;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dark #theme-toggle:hover {
+    background: #3b82f6;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Menu toggle */
+.dark .menu-toggle {
+    display: none;
+    background: #1e293b;
+    color: #f8fafc;
+    border: 1px solid #3b82f6;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dark .menu-toggle:hover {
+    background: #3b82f6;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+/* Login */
+.dark .login-container {
+    width: 100%;
+    max-width: 420px;
+    margin-top: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
+    border: 2px solid #3b82f6;  
+    border-radius: 20px; 
+}
+.dark .login-container:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4); 
+    transform: scale(1.05);     
+    border-radius: 20px;    
+}
+
+.dark .login-card {
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.dark .login-card h1 {
+    color: #f8fafc;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.dark .subtitle {
+    color: #94a3b8;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.dark .input-group {
+    margin-bottom: 20px;
+}
+
+.dark .input-group label {
+    color: #f8fafc;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;    
+}
+
+.dark .input-group input {
+    background: #0f172a;
+    color: #f8fafc;
+    border: 1px solid #374151;
+    width: 100%;
+    padding: 14px;   
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+.dark .input-group input::placeholder {
+    color: #64748b;
+}
+.dark .input-group input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59,130,246,0.3);
+}
+
+.dark .options {
+    color: #cbd5e1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+.dark .remember {
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    gap: 8px;    
+}
+
+.dark .options a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+.dark .options a:hover {
+    text-decoration: underline;
+}
+
+.dark .Login-btn {
+    background: #2563eb;
+    color: #fff;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;        
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.dark .Login-btn:hover {
+    background: #1d4ed8;
+}
+
+.dark .register-link {
+    color: #94a3b8;
+    text-align: center;
+    margin-top: 25px;    
+}
+.dark .register-link a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+}
+.dark .register-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive */
+@media(max-width:480px) {
+    .dark .login-card {
+        padding: 30px 20px;
+    }
+    .dark .options {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+}
+
+@media(max-width:1105px) {   
+    .dark .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background: #1e293b;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+    .dark .nav-links.active {
+        display: flex;
+    }
+    .dark .menu-toggle {
+        display: block;
+    }
+}

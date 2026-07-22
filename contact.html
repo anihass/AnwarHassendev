@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="stylesheet/contact-day.css" id="theme-style">
+</head>
+<body class="dark">
+    <nav class="navbar">     
+    </nav>
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p>I'd love to hear from you. Fill out the form or reach me directly.</p>
+
+    <!-- Contact Form -->
+    <form action="/anwarhassendev/sendMessage" method="POST" class="contact-form">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Direct Contact Info -->
+    <div class="contact-info">
+      <p><i class="fa-solid fa-envelope"></i>anwarhassen28@gmail.com</p>
+      <p><i class="fa-solid fa-phone"></i> +2519-77-19-83-29</p>
+      <p><i class="fa-solid fa-location-dot"></i> Adis Ababa, Ethiopia</p>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="socials">
+      <a href="https://linkedin.com/in/anwar-hassen-a30a73381" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/anihass" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>      
+      <a href="https://t.me/Anihasss" target="_blank">
+        <i class="fab fa-telegram"></i>
+      </a>
+    </div>
+  </section>
+
+  <script src="script/contact.js" type="module"></script>
+</body>
+</html>

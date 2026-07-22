@@ -40,7 +40,6 @@ body.dark {
     font-weight:bold;     
     padding: 15px 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 .dark .btn:hover {
     background: #3b82f6;
@@ -49,7 +48,7 @@ body.dark {
     box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
 }
 .dark .active{
-    background-color: #2563eb;
+    backgrokund-color: #2563eb;
 }
 .dark .nav-links{
     display:flex;
@@ -87,126 +86,75 @@ body.dark {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.dark .menu-toggle:hover {
+.dar .menu-toggle:hover {
     background: #3b82f6;
     color: #fff;
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
 }
 
-/* Hero section */
-.dark .greeting {
-    color: #3b82f6;
-    font-size:1.2rem;
-    margin-bottom:10px;
-}
-.dark .hero-content h1 {
-    color: #f8fafc;
-    font-size:4rem;
-    margin-bottom:15px;
-}
-.dark .hero-content h2 {
-    color: #cbd5e1;
-    font-size:2rem;
-    margin-bottom:20px;
-}
-.dark .description {
-    color: #94a3b8;
-    max-width:600px;
-    line-height:1.8;
-    margin-bottom:30px;
+/* Container */
+.dark .admin-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  text-align: center;
 }
 
-/* Contact button */
-.buttons{
-    display:flex;
-    gap:20px;
-    margin-bottom:30px;
-}
-.dark .contactme-btn {
-    background: #3b82f6;
-    color: #fff;
-    text-decoration:none;
-    display: inline-block;     
-    border-radius: 20px;
-    text-align: center;
-    font-weight:bold;      
-    padding: 15px 20px;
-    border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.dark .contactme-btn:hover {
-    background: #2563eb;
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+/* Admin header */
+.dark .admin-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-/* Socials */
-.socials{
-    display:flex;
-    gap:20px;
+.dark .admin-icon {
+  font-size: 4rem;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
 }
 
-.dark .socials a {
-    color: #3b82f6;
-    font-size:1.4rem;
-    transition: color 0.3s ease;
-}
-.dark .socials a:hover {
-    color: #60a5fa;
+.dark .admin-header h1 {
+  font-size: 2rem;
+  color: #f8fafc;
+  font-weight: 600;
 }
 
-/* Hero image */
-.dark .hero{
-    width:90%;
-    margin:auto;
-    min-height:85vh;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:60px;
-}
-.dark .hero-content{
-    flex:1;
-}
-.dark .hero-image img {
-    width:420px;
-    height:420px;
-    object-fit:cover;
-    border-radius:50%;
-    border:8px solid #2563eb;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-    transition: transform 0.3s ease;
-}
-.dark .hero-image img:hover {
-    transform: scale(1.05);
-}
-/* Desktop dark mode: nav links visible in a row */
-@media(min-width:1105px){
-  .dark .nav-links {
-    display:flex;
-    gap:20px;
-    list-style:none;
-  }
+/* Grid layout */
+.dark .admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
-/* Mobile dark mode: nav links hidden until hamburger is clicked */
-@media(max-width:1105px){
-    
-    .dark .hero{
-        flex-direction:column-reverse;
-        text-align:center;
-    }
+/* Cards styled as links */
+.dark .admin-card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 2rem;
+  text-decoration: none;
+  color: #f8fafc;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .dark .hero-content h1{
-        font-size:3rem;
-    }
+.dark .admin-card i {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: #3b82f6;
+}
 
-    .dark .hero-image img{
-        width:280px;
-        height:280px;
-    }
-
+.dark .admin-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background: #1e293b;
+}
+@media(max-width:1120px){
   .dark .nav-links {
     display:none; /* hidden by default */
     flex-direction: column;
@@ -226,4 +174,3 @@ body.dark {
     display:block; /* hamburger visible only on mobile */
   }
 }
-

@@ -1,0 +1,207 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #111827;
+}
+
+/* Navbar */
+.navbar {
+    width: 90%;
+    margin: auto;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+/* Buttons */
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #5586ef;
+    padding: 15px 20px;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.active {
+    background-color: #2563eb;
+}
+
+/* Theme Toggle */
+#theme-toggle {
+    border: none;
+    background: #5586ef;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0; /* prevent shrinking */
+}
+#theme-toggle:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    background-color: #5586ef;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0; /* prevent shrinking */
+}
+.menu-toggle:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+/* User card */
+.user-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Header with icon + name */
+.user-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.user-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.user-name {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Info section */
+.user-info p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Action buttons */
+.user-actions {
+  margin-top: 1rem;
+}
+
+.user-actions button {
+  margin-right: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Glow hover effect */
+.user-actions button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+/* Specific button colors */
+.make-admin {
+  background: #27ae60;
+  color: #fff;
+}
+
+.make-admin:hover {
+  box-shadow: 0 0 12px #27ae60;
+}
+
+.keep-user {
+  background: #2980b9;
+  color: #fff;
+}
+
+.keep-user:hover {
+  box-shadow: 0 0 12px #2980b9;
+}
+
+.delete-user {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.delete-user:hover {
+  box-shadow: 0 0 12px #e74c3c;
+}
+@media(max-width:1105px){    
+     .nav-links {
+        display:none;
+        flex-direction: column;
+        gap: 15px;
+        background: rgba(15, 23, 42, 0.95);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+     .nav-links.active {
+        display:flex;
+    }
+     .menu-toggle {
+        display:block;
+    }
+}

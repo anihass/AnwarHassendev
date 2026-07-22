@@ -42,6 +42,7 @@ body{
     padding: 15px 20px;
     border: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 .btn:hover {
     background-color: #2563eb;   
@@ -50,7 +51,6 @@ body{
 }
 .active{
     background-color: #2563eb;
-
 }
 
 #theme-toggle{
@@ -178,7 +178,7 @@ body{
     transform: scale(1.05);
 }
 
-@media(max-width:900px){
+@media(max-width:1105px){
 
     .hero{
         flex-direction:column-reverse;

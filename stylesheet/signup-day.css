@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {                
+    display: flex;                  
+    flex-direction: column;         
+    justify-content: center;        
+    align-items: center;            
+    background: #f8fafc;
+    color: #111827;                   
+}
+/* Header */
+.navbar {
+    width: 90%;
+    margin: auto;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;    
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block; 
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;  
+    background-color: #5586ef;
+    padding: 15px 20px;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2563eb;   
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.active {
+    background-color: #2563eb;
+}
+
+#theme-toggle {
+    border: none;
+    background: #5586ef;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#theme-toggle:hover {
+    border: none;
+    background-color: #2563eb;   
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.menu-toggle {
+    display: none;
+    background-color: #5586ef;   
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-toggle:hover {
+    border: none;
+    background-color: #2563eb;   
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);  
+}
+
+
+.signup-container{
+    width:100%;
+    max-width:450px;
+    margin-top: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.signup-container:hover{      
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+}
+
+.signup-card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.signup-card h1{
+    text-align:center;
+    color:#111827;
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#6b7280;
+    margin-bottom:30px;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#374151;
+}
+
+.input-group input{
+    width:100%;
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    font-size:1rem;
+    outline:none;
+    transition:0.3s;
+}
+
+.input-group input:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,0.15);
+}
+
+.signup-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.signup-btn:hover{
+    background:#1d4ed8;
+}
+
+.login-link{
+    text-align:center;
+    margin-top:25px;
+    color:#6b7280;
+}
+
+.login-link a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.login-link a:hover{
+    text-decoration:underline;
+}
+
+@media(max-width:480px){
+    .signup-card{
+        padding:30px 20px;
+    }
+}
+@media(max-width: 1105px) {
+    #projectsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width: 1105px) {
+    #projectsContainer {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background: #f8fafc;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}

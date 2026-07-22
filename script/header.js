@@ -1,53 +1,71 @@
 export function creatHeader(){
-    const header = 
-            `<div class="logo">
-                Anwar<span>Hassen</span>
-            </div>
+    const isLoggedIn = !!localStorage.getItem("token"); // check if token exists
+    const currentPage = window.location.pathname.split("/").pop();
+    return `
+    <div class="logo">
+      Anwar<span>Hassen</span>
+    </div>
 
-           <div class="nav-links">
-                <a href="#" class="btn home-btn active">Home</a>
-                <a href="#" class="btn about-btn ">About</a>
-                <a href="#" class="btn skills-btn ">Skills</a>
-                <a href="#" class="btn project-btn ">Projects</a>
-                <a href="#" class="btn contact-btn ">Contact</a>
-                <a href="#" class="btn login-btn ">Login</a>  
-                <a href="#" class="btn signin-btn">Sign in</a>  
-                <a href="#" class="btn admin-btn ">Admin</a>                                   
-            </div>                                                      
-            
-            <button id="theme-toggle">
-                <i class="fas fa-sun"></i>
-            </button>
-            <div class="menu-toggle">☰</div>`
-        
-            return header;
-};
+    <div class="nav-links">
+      <a href="home.html" class="btn home-btn ${currentPage === "home.html" ? "active" : ""}">Home</a>
+      <a href="about.html" class="btn about-btn ${currentPage === "about.html" ? "active" : ""}">About</a>
+      <a href="project.html" class="btn project-btn ${currentPage === "project.html" ? "active" : ""}">Projects</a>
+      <a href="contact.html" class="btn contact-btn ${currentPage === "contact.html" ? "active" : ""}">Contact</a>
+      ${isLoggedIn 
+        ? `<a class="btn logout-btn">Logout</a>` 
+        : `<a href="login.html" class="btn login-btn ${currentPage === "login.html" ? "active" : ""}">Login</a>`}
+      <a href="signup.html" class="btn signin-btn ${currentPage === "signup.html" ? "active" : ""}">Sign Up</a>  
+      <a href="admin.html" class="btn admin-btn ${currentPage === "admin.html" ? "active" : ""}">
+        <i class="fa-solid fa-user-tie "></i> 
+      </a>                                   
+    </div>                                                      
+    
+    <button id="theme-toggle">
+      <i class="fas fa-sun"></i>
+    </button>
+    <div class="menu-toggle">☰</div>
+  `;
+}
 
 export function humbergurMenuEffect(){
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
     menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle('active');
+        navLinks.classList.toggle('active');
     });
-};
+}
+
 export function toggleeffect(){
     const toggle = document.getElementById("theme-toggle");
     const theme = document.getElementById("theme-style");
     const body = document.body;
-    toggle.addEventListener("click", () => {
-    if(theme.getAttribute("href") === "stylesheet/home-night.css"){
-        // Switch to day mode
-        theme.setAttribute("href","stylesheet/home-day.css");
-        body.classList.remove("dark");   // remove dark class
+
+    // Apply saved theme on page load
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "day" && theme.getAttribute("href").includes("-night.css")) {
+        theme.setAttribute("href", theme.getAttribute("href").replace("-night.css", "-day.css"));
+        body.classList.remove("dark");
         toggle.innerHTML = '<i class="fas fa-moon"></i>';
-    } else {
-        // Switch back to night mode
-        theme.setAttribute("href","stylesheet/home-night.css");
-        body.classList.add("dark");      // add dark class
+    } else if (savedTheme === "night" && theme.getAttribute("href").includes("-day.css")) {
+        theme.setAttribute("href", theme.getAttribute("href").replace("-day.css", "-night.css"));
+        body.classList.add("dark");
         toggle.innerHTML = '<i class="fas fa-sun"></i>';
     }
-});
+
+    // Toggle on click
+    toggle.addEventListener("click", () => {
+        let href = theme.getAttribute("href");
+
+        if (href.includes("-night.css")) {
+            theme.setAttribute("href", href.replace("-night.css", "-day.css"));
+            body.classList.remove("dark");
+            toggle.innerHTML = '<i class="fas fa-moon"></i>';
+            localStorage.setItem("theme", "day");
+        } else if (href.includes("-day.css")) {
+            theme.setAttribute("href", href.replace("-day.css", "-night.css"));
+            body.classList.add("dark");
+            toggle.innerHTML = '<i class="fas fa-sun"></i>';
+            localStorage.setItem("theme", "night");
+        }
+    });
 }
-
-
-
