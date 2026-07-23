@@ -8,7 +8,7 @@ export function creatHeader(){
 
     <div class="nav-links">
       <a href="home.html" class="btn home-btn ${currentPage === "home.html" ? "active" : ""}">Home</a>
-      <a href="/about.html" class="btn about-btn ${currentPage === "about.html" ? "active" : ""}">About</a>
+      <a href="/about" class="btn about-btn ${currentPage === "about" ? "active" : ""}">About</a>
       <a href="project.html" class="btn project-btn ${currentPage === "project.html" ? "active" : ""}">Projects</a>
       <a href="contact.html" class="btn contact-btn ${currentPage === "contact.html" ? "active" : ""}">Contact</a>
       ${isLoggedIn 
