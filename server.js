@@ -12,6 +12,9 @@ app.use("/script", express.static(path.join(__dirname, "script")));
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "home.html"));
 });
+app.get("/about", (req, res) => {
+  res.sendFile(path.join(__dirname, "about.html"));
+});
 connectToDb();
 
 
