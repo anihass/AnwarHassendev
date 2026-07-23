@@ -19,7 +19,8 @@ form.addEventListener('submit',async(e)=>{
     const userName = document.getElementById("userName").value;
     const password = document.getElementById("password").value;
     const email = document.getElementById("email").value;
-    const response = await fetch("http://localhost:3000/anwarhassendev/signUp", {
+    try{
+        const response = await fetch("http://localhost:3000/anwarhassendev/signUp", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -30,12 +31,15 @@ form.addEventListener('submit',async(e)=>{
             password
         })
     });
-    const data = await response.json();
-    messageBox.textContent = data.message;
-    if (data.success) {
-        messageBox.style.color = "green";
-    } else {
-        messageBox.style.color = "red";
-    };
-    console.log(data);
+    const data = await response.json();        
+        if (data.success) {                        
+            alert("account created successfuly!"); 
+            form.reset();                      
+        } else {          
+            alert("unable to creat account");
+        }
+    }catch(e){
+         alert("Network error. Please try again.");
+        console.error(e);
+    }
 });

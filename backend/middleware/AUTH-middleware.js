@@ -7,7 +7,7 @@ const authMiddleware = (req,res,next)=>{
 
     
     const authHeader = req.headers['authorization'];
-    console.log(authHeader);
+    
     const token = authHeader && authHeader.split(" ")[1];
 
     if(!token){
@@ -19,8 +19,7 @@ const authMiddleware = (req,res,next)=>{
     }
     //decode the token 
     try{
-        const decodeToken = jwt.verify(token,SECRET_KEY);
-        console.log(decodeToken);
+        const decodeToken = jwt.verify(token,SECRET_KEY);        
         req.userInfo = decodeToken; 
         next();
     }catch(e){

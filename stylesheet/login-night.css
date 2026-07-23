@@ -58,7 +58,7 @@ body.dark {
     display: flex;
     gap: 20px;
     list-style: none;    
-}
+}   
 /* Theme toggle */
 .dark #theme-toggle {
     background: #1e293b;

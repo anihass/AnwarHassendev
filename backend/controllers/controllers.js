@@ -74,7 +74,7 @@ const logIn = async(req,res)=>{
             userId : user._id,
             userName: user.userName,
             role:user.role
-        },SECRET_KEY,{expiresIn :'15m'});
+        },SECRET_KEY,{expiresIn :'1h'});
 
         res.status(200).json({
             success : true,

@@ -35,6 +35,6 @@ form.addEventListener('submit',async(e)=>{
         }
     }catch(e){        
         alert("Network error. Please try again.");
-        console.error(error);
+        console.error(e);
     }
 });
