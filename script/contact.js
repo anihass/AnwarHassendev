@@ -14,7 +14,7 @@ form.addEventListener('submit',async(e)=>{
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
     try{
-        const response = await fetch("http://localhost:3000/anwarhassendev/sendMessage", {
+        const response = await fetch("https://anwarhassendev.onrender.com/anwarhassendev/sendMessage", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

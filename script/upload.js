@@ -41,7 +41,7 @@ form.addEventListener("submit", async (e) => {
         }
         
         const response = await fetch(
-            "http://localhost:3000/anwarhassendev/upload",
+            "https://anwarhassendev.onrender.com/anwarhassendev/upload",
             {
                 method: "POST",
                 headers: {

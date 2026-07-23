@@ -20,7 +20,7 @@ form.addEventListener('submit',async(e)=>{
     const password = document.getElementById("password").value;
     const email = document.getElementById("email").value;
     try{
-        const response = await fetch("http://localhost:3000/anwarhassendev/signUp", {
+        const response = await fetch("https://anwarhassendev.onrender.com/anwarhassendev/signUp", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

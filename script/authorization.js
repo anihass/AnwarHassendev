@@ -10,7 +10,7 @@ adminAccessControl();
 async function loadUsers() {
   const token = localStorage.getItem("token");
 
-  const response = await fetch("http://localhost:3000/anwarhassendev/users", {
+  const response = await fetch("https://anwarhassendev.onrender.com/anwarhassendev/users", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -73,7 +73,7 @@ async function loadUsers() {
 async function updateUserRole(userId, role) {
   const token = localStorage.getItem("token");
 
-  const response = await fetch(`http://localhost:3000/anwarhassendev/users/${userId}/role`, {
+  const response = await fetch(`https://anwarhassendev.onrender.com/anwarhassendev/users/${userId}/role`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -90,7 +90,7 @@ async function updateUserRole(userId, role) {
 async function deleteUser(userId) {
   const token = localStorage.getItem("token");
 
-  const response = await fetch(`http://localhost:3000/anwarhassendev/users/${userId}/delete`, {
+  const response = await fetch(`https://anwarhassendev.onrender.com/anwarhassendev/users/${userId}/delete`, {
     method: "DELETE",
     headers: {
       "Authorization": `Bearer ${token}`

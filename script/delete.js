@@ -9,7 +9,7 @@ logoutHandler();
 adminAccessControl();
 async function loadProjects() {
     try {
-        const response = await fetch("http://localhost:3000/anwarhassendev/getproject", {
+        const response = await fetch("https://anwarhassendev.onrender.com/anwarhassendev/getproject", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
