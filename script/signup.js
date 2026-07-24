@@ -34,7 +34,8 @@ form.addEventListener('submit',async(e)=>{
     const data = await response.json();        
         if (data.success) {                        
             alert("account created successfuly!"); 
-            form.reset();                      
+            form.reset();     
+            window.location.href = "/home";                 
         } else {          
             alert("unable to creat account");
         }
