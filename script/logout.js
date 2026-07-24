@@ -4,7 +4,7 @@ export function logoutHandler() {
         logoutBtn.addEventListener("click", () => {
             localStorage.removeItem("token");
             alert("You have logged out!");
-            window.location.href = "home.html"; // redirect back to login page
+            window.location.href = "/"; // redirect back to login page
         });
     }
 }
