@@ -9,7 +9,7 @@ const app = express();
 const port = 3000;
 app.use("/stylesheet", express.static(path.join(__dirname, "stylesheet")));
 app.use("/script", express.static(path.join(__dirname, "script")));
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
   res.sendFile(path.join(__dirname, "home.html"));
 });
 app.get("/about", (req, res) => res.sendFile(path.join(__dirname, "about.html")));
