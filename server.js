@@ -22,6 +22,7 @@ app.get("/autherization", (req, res) => res.sendFile(path.join(__dirname, "authe
 app.get("/delete", (req, res) => res.sendFile(path.join(__dirname, "delete.html")));
 app.get("/upload", (req, res) => res.sendFile(path.join(__dirname, "upload.html")));
 app.use("/image", express.static(path.join(__dirname, "image")));
+app.get("/admin.html", (req, res) => res.sendFile(path.join(__dirname, "admin.html")));
 
 
 connectToDb();
