@@ -34,7 +34,7 @@ form.addEventListener("submit", async (e) => {
             localStorage.setItem("token", data.accesstoken);
             messageBox.style.color = "green";
             alert("Login successful!");
-            window.location.href = "/home";             
+            window.location.href = "/";             
         } else {
             messageBox.style.color = "red";
             alert("Login failed: " + data.message);
