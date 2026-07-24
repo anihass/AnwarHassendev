@@ -7,15 +7,15 @@ export function creatHeader(){
     </div>
 
     <div class="nav-links">
-      <a href="home.html" class="btn home-btn ${currentPage === "home.html" ? "active" : ""}">Home</a>
+      <a href="/home" class="btn home-btn ${currentPage === "home" ? "active" : ""}">Home</a>
       <a href="/about" class="btn about-btn ${currentPage === "about" ? "active" : ""}">About</a>
-      <a href="project.html" class="btn project-btn ${currentPage === "project.html" ? "active" : ""}">Projects</a>
-      <a href="contact.html" class="btn contact-btn ${currentPage === "contact.html" ? "active" : ""}">Contact</a>
+      <a href="/project" class="btn project-btn ${currentPage === "project" ? "active" : ""}">Projects</a>
+      <a href="/contact" class="btn contact-btn ${currentPage === "contact" ? "active" : ""}">Contact</a>
       ${isLoggedIn 
         ? `<a class="btn logout-btn">Logout</a>` 
-        : `<a href="login.html" class="btn login-btn ${currentPage === "login.html" ? "active" : ""}">Login</a>`}
-      <a href="signup.html" class="btn signin-btn ${currentPage === "signup.html" ? "active" : ""}">Sign Up</a>  
-      <a href="admin.html" class="btn admin-btn ${currentPage === "admin.html" ? "active" : ""}">
+        : `<a href="/login" class="btn login-btn ${currentPage === "login" ? "active" : ""}">Login</a>`}
+      <a href="/signup" class="btn signin-btn ${currentPage === "signup" ? "active" : ""}">Sign Up</a>  
+      <a href="/admin" class="btn admin-btn ${currentPage === "admin" ? "active" : ""}">
         <i class="fa-solid fa-user-tie "></i> 
       </a>                                   
     </div>                                                      
